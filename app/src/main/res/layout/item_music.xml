@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp6"
+    android:layout_marginTop="@dimen/dp5"
+    android:layout_marginEnd="@dimen/dp10"
+    android:background="?selectableItemBackground"
+    android:paddingBottom="@dimen/dp10"
+    tools:ignore="MissingConstraints">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_music"
+        android:layout_width="@dimen/dp70"
+        android:layout_height="@dimen/dp70"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/tv_duration"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_name"
+        app:layout_constraintTop_toTopOf="@id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="#0000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_artist"
+        app:layout_constraintLeft_toRightOf="@+id/iv_music"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Son Tung MTP ftSnoodog _sldfsdfsdfsdfsdfsdfsdfsdfsdfsdf" />
+
+    <TextView
+        android:id="@+id/tv_artist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        tools:text="lang" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_artist"
+        tools:text="5:03" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="@dimen/dp12"
+        android:background="#D5D5D5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/iv_music"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_music" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
